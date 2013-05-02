@@ -1,0 +1,17 @@
+{
+  "name": "jden",
+  "version": "0.1.0",
+  "description": "me, automated",
+  "main": "index.js",
+  "repository": "",
+  "author": "",
+  "license": "BSD",
+  "dependencies": {
+    "commander": "~1.1.1",
+    "promise": "~2.0.0",
+    "pr": "~0.3.0",
+    "all": "0.0.0",
+    "ejs": "~0.8.3",
+    "q": "~0.9.3"
+  }
+}
