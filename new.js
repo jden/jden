@@ -23,6 +23,7 @@ module.exports = function () {
   })
   .then(function () {
     console.log('ALL DONEZO')
+    process.exit()
   }, function (x) { console.error(x.stack) })
 }
 
@@ -54,10 +55,8 @@ function format(mod) {
 }
 
 function prepareFiles(mod) {
-  console.log(mod)
-  var cwd = process.cwd()
-  mod.src = path.resolve(cwd, './new/me')
-  mod.dest = path.resolve(cwd, mod.name)
+  mod.src = path.resolve(__dirname, './new/me')
+  mod.dest = path.resolve(process.cwd(), mod.name)
 
   return fs.mkdir(mod.dest).then(function () {
     return all([
@@ -79,10 +78,14 @@ function prepareFiles(mod) {
 
   function schlep(file) {
     console.log('schlepping', file)
-    return fs.readFile(mod.src + file, {encoding: 'utf8'}).then(zap).then(function (data) {
+    return fs.readFile(mod.src + undot(file), {encoding: 'utf8'}).then(zap).then(function (data) {
       console.log('writing', file)
       return fs.writeFile(mod.dest + file, data)
     })
+  }
+
+  function undot(file) {
+    return file.replace(/\/\./,'/DOT')
   }
 
   function zap(template) {
