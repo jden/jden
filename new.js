@@ -27,9 +27,9 @@ module.exports = function () {
 }
 
 function interrogate(){
-  return Promise(function (resolve) {
-    resolve({name: 'foo', description: 'bar', keywords: 'baz,qux'})
-  })
+  // return Promise(function (resolve) {
+  //   resolve({name: 'foo', description: 'bar', keywords: 'baz,qux'})
+  // })
   return Promise(function (resolve) {
     app.prompt('name: ', function (name) {
       app.prompt('description: ', function (description) {
@@ -55,8 +55,9 @@ function format(mod) {
 
 function prepareFiles(mod) {
   console.log(mod)
-  mod.src = path.resolve(__dirname, './new/me')
-  mod.dest = path.resolve(__dirname, mod.name)
+  var cwd = process.cwd()
+  mod.src = path.resolve(cwd, './new/me')
+  mod.dest = path.resolve(cwd, mod.name)
 
   return fs.mkdir(mod.dest).then(function () {
     return all([
