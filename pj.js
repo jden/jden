@@ -7,8 +7,9 @@ module.exports = function (name, desc) {
     return
   }
   console.log('package json time? let\'s do this!')
+  name = name || last(process.cwd().split('/'))
   var pj = {
-    "name": name || "INVALID NAMEEEEEE",
+    "name": name,
     "author": "jden <jason@denizac.org>",
     "version": "0.1.0",
     "description": desc || "silly jden forgot to add a description",
@@ -22,4 +23,8 @@ module.exports = function (name, desc) {
     "readmeFilename": "README.md"
   }
   fs.writeFileSync(process.cwd() + '/package.json', JSON.stringify(pj, null, 2))
+}
+
+function last(arr) {
+  return arr[arr.length-1]
 }
