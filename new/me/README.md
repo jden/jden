@@ -2,8 +2,10 @@
 <%- description %>
 
 ## usage
+```js
+var <%- nameCamel %> = require('<%- name %>')
+```
 
-    var <%- nameCamel %> = require('<%- name %>')
 
 ## api
 
@@ -28,4 +30,4 @@ From package root:
 
 ## license
 
-MIT. (c) 2013 jden <jason@denizac.org>. See LICENSE.md
+MIT. (c) jden <jason@denizac.org>. See LICENSE.md
