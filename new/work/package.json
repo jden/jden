@@ -1,0 +1,20 @@
+{
+  "name": "<%- name %>",
+  "author": "AgileMD <hello@agilemd.com>",
+  "contributors": ["jden <jason@denizac.org>"],
+  "version": "0.1.0",
+  "description": "<%- description %>",
+  "keywords": ["<%- keywordsJson %>"],
+<% if (private) {%>  "private": true,
+<%}%>  "main": "index.js",
+  "scripts": {
+    "test": "node node_modules/mocha/bin/mocha"
+  },
+  "repository": "<%- repo %>",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "chai": "~1.6.0",
+    "mocha": "~1.9.0"
+  }
+}

@@ -10,6 +10,10 @@ jden.command('new')
   .description('create a new module project')
   .action('new')
 
+jden.command('work')
+  .description('create a new module project for work')
+  .action('work')
+
 jden.command('pj [name] [desc]')
   .description('make a new package.json file in the current directory')
   .action('pj')
