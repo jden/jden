@@ -30,4 +30,4 @@ From package root:
 
 ## license
 
-MIT. (c) MMXIII jden <jason@denizac.org>. See LICENSE.md
+ISC. (c) MMXIV jden <jason@denizac.org>. See LICENSE.md

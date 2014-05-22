@@ -32,5 +32,5 @@ From package root:
 <% if (private) {
   %>proprietary<%
 } else {
-  %>MIT. (c) MMXIII AgileMD http://agilemd.com<%
+  %>ISC. (c) MMXIV Code for America<%
 } %>

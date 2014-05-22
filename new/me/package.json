@@ -6,13 +6,13 @@
   "keywords": ["<%- keywordsJson %>"],
   "main": "index.js",
   "scripts": {
-    "test": "node node_modules/mocha/bin/mocha"
+    "test": "mocha"
   },
   "repository": "<%- repo %>",
-  "license": "MIT",
+  "license": "ISC",
   "readmeFilename": "README.md",
   "devDependencies": {
-    "chai": "~1.6.0",
-    "mocha": "~1.9.0"
+    "chai": "^1.9.1",
+    "mocha": "^1.19.0"
   }
 }
