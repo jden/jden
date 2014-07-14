@@ -13,7 +13,7 @@ module.exports = function () {
   .then(format)
   .then(prepareFiles)
   .then(function (mod) {
-    return all([
+    return Promise.all([
       installDevModules(mod),
       makeLocalRepo(mod),
       makeRemoteRepo(mod)
