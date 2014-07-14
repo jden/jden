@@ -1,6 +1,6 @@
 {
   "name": "jden",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "me, automated",
   "main": "index.js",
   "bin": "./index.js",
@@ -9,6 +9,7 @@
   "license": "MIT",
   "dependencies": {
     "commander": "~1.1.1",
+    "pr": "~0.3.0",
     "ejs": "~0.8.3",
     "polyfill-promise": "^0.1.3"
   }
