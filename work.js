@@ -1,11 +1,9 @@
-var Promise = require('promise')
-var all = require('Q').all
+require('polyfill-promise')
 var app
 var fs = require('pr/fs')
 var path = require('pr/path')
 var ejs = require('ejs')
 var exec = require('pr/child_process').exec
-var Q = require('Q')
 
 
 module.exports = function () {
@@ -28,10 +26,7 @@ module.exports = function () {
 }
 
 function interrogate(){
-  // return Promise(function (resolve) {
-  //   resolve({name: 'foo', description: 'bar', keywords: 'baz,qux'})
-  // })
-  return Promise(function (resolve) {
+  return new Promise(function (resolve) {
     app.prompt('name: ', function (name) {
       app.prompt('description: ', function (description) {
         app.prompt('keywords: ', function (keywords) {
@@ -65,7 +60,7 @@ function prepareFiles(mod) {
   mod.dest = path.resolve(process.cwd(), mod.name)
 
   return fs.mkdir(mod.dest).then(function () {
-    return all([
+    return Promise.all([
       schlep('/README.md'),
       mod.private ? Q() : schlep('/LICENSE.md'),
       schlep('/.gitignore'),
@@ -128,5 +123,5 @@ function execs(cwd, cmds) {
         console.log(out.stdout)
       })
     })
-  }, Q())
+  }, Promise.resolve())
 }

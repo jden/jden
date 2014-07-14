@@ -9,9 +9,7 @@
   "license": "MIT",
   "dependencies": {
     "commander": "~1.1.1",
-    "promise": "~2.0.0",
-    "pr": "~0.3.0",
     "ejs": "~0.8.3",
-    "q": "~0.9.3"
+    "polyfill-promise": "^0.1.3"
   }
 }
