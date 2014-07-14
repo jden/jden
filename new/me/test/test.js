@@ -1,5 +1,4 @@
-var chai = require('chai')
-chai.should()
+var mochi = require('mochi')
 
 describe('<%- name %>', function () {
   var <%- nameCamel %> = require('../')

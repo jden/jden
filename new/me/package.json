@@ -12,7 +12,6 @@
   "license": "ISC",
   "readmeFilename": "README.md",
   "devDependencies": {
-    "chai": "^1.9.1",
-    "mocha": "^1.19.0"
+    "mochi": "0.1.0"
   }
 }
