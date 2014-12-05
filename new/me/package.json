@@ -6,7 +6,7 @@
   "keywords": ["<%- keywordsJson %>"],
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mochi"
   },
   "repository": "<%- repo %>",
   "license": "ISC",
