@@ -1,6 +1,6 @@
 {
   "name": "<%- name %>",
-  "author": "Code for America <info@codeforamerica.org>",
+  "author": "AgileMD <engineering@agilemd.com>",
   "contributors": ["jden <jason@denizac.org>"],
   "version": "0.1.0",
   "description": "<%- description %>",
@@ -8,13 +8,12 @@
 <% if (private) {%>  "private": true,
 <%}%>  "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mochi"
   },
   "repository": "<%- repo %>",
   "license": "ISC",
   "readmeFilename": "README.md",
   "devDependencies": {
-    "chai": "^1.9.1",
-    "mocha": "^1.19.0"
+    "mochi": "0.3.0"
   }
 }

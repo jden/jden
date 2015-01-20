@@ -32,5 +32,5 @@ From package root:
 <% if (private) {
   %>proprietary<%
 } else {
-  %>ISC. (c) MMXIV Code for America<%
+  %>ISC. (c) MMXV AgileMD<%
 } %>
