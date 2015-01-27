@@ -45,7 +45,7 @@ function format(mod) {
   mod.keywords = mod.keywords.split(',').map(function (x) { return x.trim() })
   mod.nameCamel = mod.name.replace(/-\w/g, function (name) { return name[1].toUpperCase()})
   mod.keywordsJson = mod.keywords.map(function (k) { return '"'+k+'"'}).join(', ').substr(1).replace(/"$/,'')
-  mod.repo = 'git@github.com:jden/node-' + mod.name + '.git'
+  mod.repo = 'git@github.com:jden/' + mod.name + '.git'
   return mod
 }
 
