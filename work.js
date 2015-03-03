@@ -1,4 +1,4 @@
-require('polyfill-promise')
+require('polyfill-promise')()
 var app
 var fs = require('pr/fs')
 var path = require('pr/path')
@@ -46,7 +46,6 @@ function interrogate(){
 }
 
 function format(mod) {
-  console.log('waa')
   mod.keywords = mod.keywords.split(',').map(function (x) { return x.trim() })
   mod.nameCamel = mod.name.replace(/-\w/g, function (name) { return name[1].toUpperCase()})
   mod.keywordsJson = mod.keywords.map(function (k) { return '"'+k+'"'}).join(', ').substr(1).replace(/"$/,'')
@@ -62,7 +61,7 @@ function prepareFiles(mod) {
   return fs.mkdir(mod.dest).then(function () {
     return Promise.all([
       schlep('/README.md'),
-      mod.private ? Q() : schlep('/LICENSE.md'),
+      mod.private ? Promise.resolve() : schlep('/LICENSE.md'),
       schlep('/.gitignore'),
       schlep('/package.json'),
       schlep('/index.js'),
