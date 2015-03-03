@@ -2,8 +2,7 @@
 
 var jden = ax(require('commander'))
 
-//var package = require('./package.json')
-var package = {version: 1}
+var package = require('./package.json')
 jden.version(package.version)
 
 jden.command('new')
