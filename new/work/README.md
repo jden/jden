@@ -1,9 +1,9 @@
-# <%- name %>
+# @agilemd/<%- name %>
 <%- description %>
 
 ## usage
 ```js
-var <%- nameCamel %> = require('<%- name %>')
+var <%- nameCamel %> = require('@agilemd/<%- name %>')
 ```
 
 
@@ -12,7 +12,7 @@ var <%- nameCamel %> = require('<%- name %>')
 
 ## installation
 
-    $ npm install <%- name %>
+    $ npm install @agilemd/<%- name %>
 
 
 ## running the tests
@@ -21,11 +21,6 @@ From package root:
 
     $ npm install
     $ npm test
-
-
-## contributors
-
-- jden <jason@denizac.org>
 
 
 ## license

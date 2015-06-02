@@ -30,15 +30,12 @@ function interrogate(){
     app.prompt('name: ', function (name) {
       app.prompt('description: ', function (description) {
         app.prompt('keywords: ', function (keywords) {
-          app.prompt('private? (y/N) ', function (private) {
-              console.log('p', private)
             resolve({
               name: name,
               description: description,
               keywords: keywords,
-              private: private
+              private: false
             })
-          })
         })
       })
     })

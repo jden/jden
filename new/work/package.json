@@ -1,19 +1,21 @@
 {
-  "name": "<%- name %>",
+  "name": "@agilemd/<%- name %>",
   "author": "AgileMD <engineering@agilemd.com>",
   "contributors": ["jden <jason@denizac.org>"],
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "<%- description %>",
   "keywords": ["<%- keywordsJson %>"],
-<% if (private) {%>  "private": true,
-<%}%>  "main": "index.js",
+  "main": "index.js",
   "scripts": {
-    "test": "mochi"
+    "test": "jsw && mocha"
   },
   "repository": "<%- repo %>",
-  "license": "ISC",
+  "license": "proprietary",
   "readmeFilename": "README.md",
   "devDependencies": {
-    "mochi": "0.3.0"
+    "mocha": "2.2.5",
+    "chai": "2.3.0",
+    "jsw": "3.11.1",
+    "istanbul": "0.3.14"
   }
 }
