@@ -34,7 +34,7 @@ function interrogate(){
               name: name,
               description: description,
               keywords: keywords,
-              private: false
+              private: 'n'
             })
         })
       })
