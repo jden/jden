@@ -6,12 +6,13 @@
   "keywords": ["<%- keywordsJson %>"],
   "main": "index.js",
   "scripts": {
-    "test": "mochi"
+    "test": "standard && mochi"
   },
   "repository": "<%- repo %>",
   "license": "ISC",
   "readmeFilename": "README.md",
   "devDependencies": {
-    "mochi": "0.3.0"
+    "mochi": "0.3.0",
+    "standard": "^4.0.1"
   }
 }
