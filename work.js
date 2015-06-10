@@ -1,4 +1,4 @@
-require('polyfill-promise')()
+var Promise = require('polyfill-promise')
 var app
 var fs = require('pr/fs')
 var path = require('pr/path')
