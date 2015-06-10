@@ -4,6 +4,9 @@
   "description": "me, automated",
   "main": "index.js",
   "bin": "./index.js",
+  "scripts": {
+    "test": "echo ok"
+  },
   "repository": "git@github.com:jden/jden.git",
   "author": "jden",
   "license": "MIT",
