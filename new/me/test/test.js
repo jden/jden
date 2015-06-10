@@ -1,3 +1,6 @@
+/* globals describe, it */
+'use strict'
+
 var mochi = require('mochi')
 
 describe('<%- name %>', function () {

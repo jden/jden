@@ -7,15 +7,20 @@
   "keywords": ["<%- keywordsJson %>"],
   "main": "index.js",
   "scripts": {
+    "coverage": "istanbul cover --dir=artifacts --report=json-summary --report=html node_modules/mocha/bin/_mocha -- --recursive",
+    "lint": "jsw",
     "test": "jsw && mocha"
   },
   "repository": "<%- repo %>",
   "license": "proprietary",
   "readmeFilename": "README.md",
   "devDependencies": {
-    "mocha": "2.2.5",
-    "chai": "2.3.0",
-    "jsw": "3.11.1",
+    "mocha": "^2.2.5",
+    "chai": "^3.0.0",
+    "jsw": "4.0.1",
     "istanbul": "0.3.14"
+  },
+  "standard": {
+    "ignore": ["artifacts/"]
   }
 }

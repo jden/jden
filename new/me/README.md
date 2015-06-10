@@ -1,6 +1,9 @@
 # <%- name %>
 <%- description %>
 
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+
+
 ## usage
 ```js
 var <%- nameCamel %> = require('<%- name %>')

@@ -13,7 +13,7 @@
   "dependencies": {
     "commander": "~1.1.1",
     "ejs": "~0.8.3",
-    "polyfill-promise": "^3.0.0",
-    "pr": "~0.3.0"
+    "polyfill-promise": "^4.0.1",
+    "pr": "^0.3.2"
   }
 }
