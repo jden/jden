@@ -6,13 +6,16 @@
   "keywords": ["<%- keywordsJson %>"],
   "main": "index.js",
   "scripts": {
-    "test": "standard && mochi"
+    "lint": "standard",
+    "pretest": "npm run todo && standard",
+    "test": "mochi",
+    "todo": "echo TODO: create git repo; echo TODO: enable circleci build; exit 1"
   },
   "repository": "<%- repo %>",
   "license": "ISC",
   "readmeFilename": "README.md",
   "devDependencies": {
     "mochi": "0.3.0",
-    "standard": "^4.0.1"
+    "standard": "^6.0.0"
   }
 }

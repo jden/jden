@@ -1,11 +1,11 @@
 /* globals describe, it */
 'use strict'
 
-var mochi = require('mochi')
+const expect = require('mochi').expect
 
 describe('<%- name %>', function () {
-  var <%- nameCamel %> = require('../')
-  
+  const <%- nameCamel %> = require('../')
+
   it('', function () {
 
   })
