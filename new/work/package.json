@@ -1,6 +1,6 @@
 {
-  "name": "@agilemd/<%- name %>",
-  "author": "AgileMD <engineering@agilemd.com>",
+  "name": "<%- name %>",
+  "author": "Zendesk <engineering@zendesk.com>",
   "contributors": ["jden <jason@denizac.org>"],
   "version": "1.0.0",
   "description": "<%- description %>",
@@ -8,17 +8,18 @@
   "main": "index.js",
   "scripts": {
     "coverage": "istanbul cover --dir=artifacts --report=json-summary --report=html node_modules/mocha/bin/_mocha -- --recursive",
-    "lint": "jsw",
-    "test": "jsw && mocha"
+    "lint": "standard",
+    "pretest": "npm run lint",
+    "test": "mocha"
   },
   "repository": "<%- repo %>",
-  "license": "proprietary",
+  "license": "UNLICENSED",
   "readmeFilename": "README.md",
   "devDependencies": {
-    "mocha": "^2.2.5",
-    "chai": "^3.0.0",
-    "jsw": "4.0.1",
-    "istanbul": "0.3.14"
+    "mocha": "^2.4.5",
+    "chai": "^3.5.0",
+    "standard": "^6.0.0",
+    "istanbul": "^0.4.2"
   },
   "standard": {
     "ignore": ["artifacts/"]
